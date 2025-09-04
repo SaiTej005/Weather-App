@@ -1,8 +1,7 @@
-/* General styling */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #32127b; /* Dark gray background */
+  background: #32127b; 
   color: white;
 }
 
@@ -29,7 +28,6 @@ body {
   color: #ffffff;
 }
 
-/* Search Box */
 .search-box {
   display: flex;
   justify-content: center;
@@ -59,7 +57,6 @@ body {
   background-color: #005fcc;
 }
 
-/* Dropdown styling */
 .dropdown {
   list-style: none;
   padding: 0;
@@ -79,7 +76,6 @@ body {
   background: #555;
 }
 
-/* Weather Result */
 .weather-result {
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.1);
@@ -97,7 +93,6 @@ body {
   margin: 5px 0;
 }
 
-/* Refresh Button */
 .refresh-btn {
   margin-top: 15px;
   padding: 10px 15px;
