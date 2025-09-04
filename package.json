@@ -1,5 +1,5 @@
 {
-  "name": "weather-now-final",
+  "name": "weather-now",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
