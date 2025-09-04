@@ -6,7 +6,7 @@ function App() {
   const [filteredCities, setFilteredCities] = useState([]);
   const [weather, setWeather] = useState(null);
 
-  // Fixed city list with coordinates
+
   const topCities = [
     { name: "Hyderabad", lat: 17.3850, lon: 78.4867 },
     { name: "Mumbai", lat: 19.0760, lon: 72.8777 },
@@ -25,7 +25,7 @@ function App() {
   if (!targetCity) return;
 
   try {
-    // Step 1: Get city coordinates dynamically
+
     const geoResponse = await fetch(
       `https://geocoding-api.open-meteo.com/v1/search?name=${targetCity}&count=1&language=en&format=json`
     );
@@ -38,7 +38,6 @@ function App() {
 
     const { latitude, longitude, name } = geoData.results[0];
 
-    // Step 2: Fetch weather using the coordinates
     const weatherResponse = await fetch(
       `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
     );
@@ -68,7 +67,6 @@ function App() {
     }
   };
 
-  // Emoji for weather condition
   const getWeatherEmoji = (weatherCode) => {
     if (!weatherCode) return "🌈";
     if (weatherCode < 3) return "☀️"; // Clear sky
@@ -78,7 +76,6 @@ function App() {
     return "🌪️"; // Storm/other
   };
 
-  // Filter dropdown cities
   const handleCityInput = (e) => {
     const value = e.target.value;
     setCity(value);
@@ -87,7 +84,6 @@ function App() {
     );
   };
 
-  // Refresh app
   const refreshApp = () => {
     setCity("");
     setWeather(null);
